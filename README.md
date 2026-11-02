@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 Bazar Dor — বাজার দর
 
-## Getting Started
+**Bazar Dor** is a responsive product price tracking web application built with Next.js. It helps users explore daily market prices of essential products in Bangladesh, compare price changes, and view market-wise price information.
 
-First, run the development server:
+## ✨ Features
+
+- **Product Listings:** Browse available products with their current prices.
+- **Category Filtering:** Explore products by categories such as rice and other essentials.
+- **Price Trends:** View products with the highest price increases and decreases.
+- **Product Details:** See price history, market information, and price summaries.
+- **Sorting:** Sort products by default order, lowest price, or highest price.
+- **Authentication:** Sign up and sign in using email/password, Google, or GitHub.
+- **Protected Routes:** Product details are accessible only to authenticated users.
+- **Profile Management:** Update your account name.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop screens.
+- **Notifications:** Get feedback through toast notifications.
+
+## 🛠️ Technologies Used
+
+- Next.js
+- React
+- JavaScript
+- Tailwind CSS
+- Better Auth
+- MongoDB Atlas
+- Lucide React
+- React Hot Toast
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/nafisa-israt/bazar-dor.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd bazar-dor
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure environment variables
+
+Create a `.env.local` file in the root directory and add the following variables:
+
+```env
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_DB_URL=your_mongodb_connection_string
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+```
+
+Replace the placeholder values with your own credentials. **Never upload your actual secret keys or `.env.local` file to GitHub.**
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📡 API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses the Bazar Dor API to retrieve product and category information.
 
-## Learn More
+**Primary API:**
 
-To learn more about Next.js, take a look at the following resources:
+```text
+https://openapi.programming-hero.com/api/bazardor
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Alternative APIs:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+https://api.api-store.workers.dev/api/bazardor
+https://api.abcz.workers.dev/api/bazardor
+```
 
-## Deploy on Vercel
+## 📁 Main Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Route | Description |
+|---|---|
+| `/` | Homepage with product listings and price trends |
+| `/category/[slug]` | Products filtered by category |
+| `/product/[slug]` | Protected product details |
+| `/signin` | User sign-in |
+| `/signup` | User registration |
+| `/profile` | User profile management |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👩‍💻 Developer
+
+**Nafisa Israt**
+
+- GitHub: [nafisa-israt](https://github.com/nafisa-israt)
+
+## 📄 License
+
+This project was developed as part of a Programming Hero assignment.
