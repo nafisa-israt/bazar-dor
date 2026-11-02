@@ -69,3 +69,7 @@ export async function getCategoryBySlug(slug) {
     response?.category ??
     response;
 }
+export async function getProductsByCategory(slug) {
+  const response = await fetchApi(`/products?category=${slug}`);
+  return extractArray(response, "products");
+}
