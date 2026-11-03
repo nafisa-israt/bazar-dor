@@ -2,6 +2,9 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 
 import {
   getCategories,
@@ -40,6 +43,16 @@ function ProductLoading() {
 
 async function ProductContent({ params }) {
   const { slug } = await params;
+
+  // Check user session
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  // Redirect if user is not logged in
+  if (!session) {
+    redirect(`/signin?callbackURL=${encodeURIComponent(`/product/${slug}`)}`);
+  }
 
   const [categories, products] = await Promise.all([
   getCategories(),
