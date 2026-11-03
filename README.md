@@ -1,6 +1,12 @@
-# 🛒 Bazar Dor — বাজার দর
+
+
+# 🛒 Bazar Dor
 
 **Bazar Dor** is a responsive product price tracking web application built with Next.js. It helps users explore daily market prices of essential products in Bangladesh, compare price changes, and view market-wise price information.
+
+## 🌐 Live Demo
+
+[Visit Bazar Dor](https://bazar-dor-ten-brown.vercel.app)
 
 ## ✨ Features
 
@@ -66,7 +72,9 @@ GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
 
-Replace the placeholder values with your own credentials. **Never upload your actual secret keys or `.env.local` file to GitHub.**
+Replace the placeholder values with your own credentials.
+
+**Important:** Never upload your actual secret keys or `.env.local` file to GitHub.
 
 ### 5. Run the development server
 
@@ -109,7 +117,11 @@ https://api.abcz.workers.dev/api/bazardor
 **Nafisa Israt**
 
 - GitHub: [nafisa-israt](https://github.com/nafisa-israt)
+- Repository: [bazar-dor](https://github.com/nafisa-israt/bazar-dor)
 
 ## 📄 License
 
 This project was developed as part of a Programming Hero assignment.
+
+
+
